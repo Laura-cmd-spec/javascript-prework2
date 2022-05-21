@@ -5,15 +5,18 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 let computerMove = getMoveName(randomNumber);
 
+function playGame(playerInput){
+    clearMessages();
+}
 function getMoveName(MoveId){
     if(MoveId == 1){
-      return 'kamień';
+      return 'rock';
     }else if(MoveId == 2){
-      return 'papier';
+      return 'paper';
     }else if(MoveId == 3){
-      return 'nożyce';
+      return 'scissors';
     }else {
-      printMessage('Nie znam ruchu o id ' + MoveId + '.');
+      printMessage('I do not know the moved o id ' + MoveId + '.');
       return 'nieznany ruch';
     }
   }
@@ -48,7 +51,7 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 
 
 function displayResult(ComputerMove, PlayerMove){
-    printMessage('Zagrałem ' + ComputerMove + ', a Ty ' + PlayerMove);
+    printMessage('I played ' + ComputerMove + ', and You ' + PlayerMove);
 }
 
 if(playerMove =='Nieznany ruch') {
