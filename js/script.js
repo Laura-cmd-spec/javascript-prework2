@@ -7,7 +7,7 @@ let computerMove = getMoveName(randomNumber);
 
 function playGame(playerInput){
     clearMessages();
-}
+
 function getMoveName(MoveId){
     if(MoveId == 1){
       return 'rock';
@@ -73,4 +73,23 @@ if( computerMove == 'rock' && playerMove == 'paper'){
     printMessage('You lost!');
 }else {('computerMove == playerMove')
     printMessage('Draw!');
+}
+
+document.getElementById('play-rock').addEventListener('click', function(){
+    playGame(1)
+});
+document.getElementById('play-paper').addEventListener('click', function(){
+    playGame(2)
+});
+document.getElementById('play-scissors').addEventListener('click', function(){
+    playGame(3)
+})
+document.getElementById('restart').addEventListener('click', function () {
+    restartGame();
+});
+
+document.getElementById('next-round').addEventListener('click', function () {
+    nextRound();
+});
+
 }
