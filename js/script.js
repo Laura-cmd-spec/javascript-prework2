@@ -1,5 +1,5 @@
 function playGame(playerInput){
-    clearMessages()
+    clearMessages();
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
@@ -32,7 +32,7 @@ printMessage('My move: ' + computerMove);
 
 let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.'); */
 
-console.log('Gracz wpisał:' + playerInput);
+/*console.log('Gracz wpisał:' + playerInput);*/
 
 /*let playerMove = getMoveName(playerInput)*/
 
@@ -50,23 +50,27 @@ printMessage('Your move: ' + playerMove);*/
 
 function displayResult(computerMove, playerMove){
     printMessage('I played ' + computerMove + ', and You ' + playerMove)
+
 if( computerMove == 'rock' && playerMove == 'paper'){
     printMessage('You Won!');
+}else if( computerMove == 'rock' && playerMove == 'scissors'){
+    printMessage('You lost!');
+}
+if( computerMove == 'paper' && playerMove == 'rock'){
+    printMessage('You lost!');
 }else if( computerMove == 'paper' && playerMove == 'scissors'){
     printMessage('You Won!');
-}else if( computerMove == 'scissors' && playerMove == 'rock'){
+}
+if( computerMove == 'scissors' && playerMove == 'rock'){
     printMessage('You won!');
-}else if( computerMove == 'rock' && playerMove == 'scissors'){
-    printMessage('You Won!');
-}else if( computerMove == 'paper' && playerMove == 'rock'){
+}else if( computerMove == 'scissors' && playerMove == 'paper')
     printMessage('You lost!');
-}else if( computerMove == 'paper' && playerMove == 'rock'){
-    printMessage('You lost!');
-}else if( computerMove == 'scissors' && playerMove == 'paper'){
-    printMessage('You lost!');
-}else {('computerMove == playerMove');
+}
+if (computerMove == playerMove){
     printMessage('Draw!');
 }
+if( PlayerMove == 'nieznany ruch'){
+    printMessage('Error!');
 }
 
 displayResult(computerMove, playerMove);
