@@ -6,8 +6,8 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber)
 
-function getMoveName(MoveId){
-    if(MoveId == 1){
+function getMoveName(argMoveId){
+    if(gMoveId == 1){
       return 'rock';
     }else if(MoveId == 2){
       return 'paper';
@@ -50,26 +50,26 @@ printMessage('Your move: ' + playerMove);*/
 
 function displayResult(computerMove, playerMove){
     printMessage('I played ' + computerMove + ', and You ' + playerMove)
-
+}
 if( computerMove == 'rock' && playerMove == 'paper'){
     printMessage('You Won!');
-}else if( computerMove == 'rock' && playerMove == 'scissors'){
+}else{( computerMove == 'rock' && playerMove == 'scissors')
     printMessage('You lost!');
 }
 if( computerMove == 'paper' && playerMove == 'rock'){
     printMessage('You lost!');
-}else if( computerMove == 'paper' && playerMove == 'scissors'){
+}else {( computerMove == 'paper' && playerMove == 'scissors')
     printMessage('You Won!');
 }
 if( computerMove == 'scissors' && playerMove == 'rock'){
     printMessage('You won!');
-}else if( computerMove == 'scissors' && playerMove == 'paper')
+}else { ( computerMove == 'scissors' && playerMove == 'paper')
     printMessage('You lost!');
 }
 if (computerMove == playerMove){
     printMessage('Draw!');
 }
-if( PlayerMove == 'nieznany ruch'){
+if( playerMove == 'nieznany ruch'){
     printMessage('Error!');
 }
 
