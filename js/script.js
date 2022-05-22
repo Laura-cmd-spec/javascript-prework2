@@ -47,11 +47,13 @@ if(playerInput =='1'){
     playerMove ='scissore';
 }
 printMessage('Your move: ' + playerMove);*/
+
 console.log('Wylosowana liczba to: ' + randomNumber);
 
+console.log('moves:', computerMove, playerMove);
 
-function displayResult(ComputerMove, PlayerMove){
-    printMessage('I played ' + ComputerMove + ', and You ' + PlayerMove);
+function displayResult(computerMove, playerMove){
+    printMessage('I played ' + computerMove + ', and You ' + playerMove);
 }
 
 if(playerMove =='Nieznany ruch') {
@@ -83,7 +85,7 @@ document.getElementById('play-paper').addEventListener('click', function(){
 });
 document.getElementById('play-scissors').addEventListener('click', function(){
     playGame(3)
-})
+});
 document.getElementById('restart').addEventListener('click', function () {
     restartGame();
 });
