@@ -1,12 +1,10 @@
-function getMoveName()
+function playGame(playerInput){
+    clearMessages()
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-/*console.log('Wylosowana liczba to: ' + randomNumber);*/
+console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = getMoveName(randomNumber);
-
-function playGame(playerInput){
-    clearMessages();
+let computerMove = getMoveName(randomNumber)
 
 function getMoveName(MoveId){
     if(MoveId == 1){
@@ -36,7 +34,7 @@ let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.'); *
 
 console.log('Gracz wpisał:' + playerInput);
 
-let playerMove = getMoveName(playerInput)
+/*let playerMove = getMoveName(playerInput)*/
 
 /*let playerMove ='nieznany ruch';
 if(playerInput =='1'){
@@ -48,17 +46,10 @@ if(playerInput =='1'){
 }
 printMessage('Your move: ' + playerMove);*/
 
-console.log('Wylosowana liczba to: ' + randomNumber);
-
-console.log('moves:', computerMove, playerMove);
+/*console.log('Wylosowana liczba to: ' + randomNumber);*/
 
 function displayResult(computerMove, playerMove){
-    printMessage('I played ' + computerMove + ', and You ' + playerMove);
-}
-
-if(playerMove =='Nieznany ruch') {
-    printMessage('Error');
-}
+    printMessage('I played ' + computerMove + ', and You ' + playerMove)
 if( computerMove == 'rock' && playerMove == 'paper'){
     printMessage('You Won!');
 }else if( computerMove == 'paper' && playerMove == 'scissors'){
@@ -73,9 +64,12 @@ if( computerMove == 'rock' && playerMove == 'paper'){
     printMessage('You lost!');
 }else if( computerMove == 'scissors' && playerMove == 'paper'){
     printMessage('You lost!');
-}else {('computerMove == playerMove')
+}else {('computerMove == playerMove');
     printMessage('Draw!');
 }
+}
+
+displayResult(computerMove, playerMove);
 
 document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1)
