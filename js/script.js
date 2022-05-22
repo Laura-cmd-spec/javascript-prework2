@@ -1,13 +1,14 @@
 function playGame(playerInput){
     clearMessages();
+
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 let computerMove = getMoveName(randomNumber)
 
-function getMoveName(argMoveId){
-    if(gMoveId == 1){
+function getMoveName(MoveId){
+    if(MoveId == 1){
       return 'rock';
     }else if(MoveId == 2){
       return 'paper';
@@ -49,29 +50,26 @@ printMessage('Your move: ' + playerMove);*/
 /*console.log('Wylosowana liczba to: ' + randomNumber);*/
 
 function displayResult(computerMove, playerMove){
-    printMessage('I played ' + computerMove + ', and You ' + playerMove)
-}
+    printMessage('I played ' + computerMove + ', and You ' + playerMove);
 if( computerMove == 'rock' && playerMove == 'paper'){
     printMessage('You Won!');
-}else{( computerMove == 'rock' && playerMove == 'scissors')
+} else if( computerMove == 'rock' && playerMove == 'scissors'){
     printMessage('You lost!');
-}
-if( computerMove == 'paper' && playerMove == 'rock'){
+} else if( computerMove == 'paper' && playerMove == 'rock'){
     printMessage('You lost!');
-}else {( computerMove == 'paper' && playerMove == 'scissors')
+} else if ( computerMove == 'paper' && playerMove == 'scissors'){
     printMessage('You Won!');
-}
-if( computerMove == 'scissors' && playerMove == 'rock'){
+} else if( computerMove == 'scissors' && playerMove == 'rock'){
     printMessage('You won!');
-}else { ( computerMove == 'scissors' && playerMove == 'paper')
+} else if ( computerMove == 'scissors' && playerMove == 'paper'){
     printMessage('You lost!');
-}
-if (computerMove == playerMove){
+} else if (computerMove == playerMove){
     printMessage('Draw!');
-}
-if( playerMove == 'nieznany ruch'){
+} else {( playerMove == 'nieznany ruch')
     printMessage('Error!');
-}
+}}
+
+console.log(displayResult)
 
 displayResult(computerMove, playerMove);
 
@@ -91,5 +89,4 @@ document.getElementById('restart').addEventListener('click', function () {
 document.getElementById('next-round').addEventListener('click', function () {
     nextRound();
 });
-
 }
