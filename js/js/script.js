@@ -19,6 +19,7 @@ function getMoveName(MoveId){
       return 'nieznany ruch';
     }
   }
+getMoveName();
 
 /*let computerMove = 'nieznany ruch';
 if(randomNumber =='1'){
@@ -27,11 +28,11 @@ if(randomNumber =='1'){
     computerMove ='paper';
 }else {(randomNumber =='3')
     computerMove ='scissors';
-} 
+} */
 
-printMessage('My move: ' + computerMove);
+/*printMessage('My move: ' + computerMove);*/
 
-let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.'); */
+let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.'); 
 
 /*console.log('Gracz wpisał:' + playerInput);*/
 
