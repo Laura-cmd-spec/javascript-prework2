@@ -1,5 +1,5 @@
-function playGame(playerInput){
-    clearMessages();
+function playGame(playerInput) {
+clearMessages();
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
@@ -8,15 +8,16 @@ console.log('Wylosowana liczba to: ' + randomNumber);
 let computerMove = getMoveName(randomNumber)
 
 function getMoveName(MoveId){
-    if(MoveId == 1){
-      return 'rock';
-      } else if(MoveId == 2){
-      return 'paper';
-      } else if(MoveId == 3){
-      return 'scissors';
-      } else {
-      printMessage ('I do not know the moved id ' + MoveId + '.');
-      return 'nieznany ruch';
+
+  if(MoveId == 1){
+    return 'rock';
+    } else if(MoveId == 2){
+    return 'paper';
+    } else if(MoveId == 3){
+    return 'scissors';
+    } else {
+    printMessage ('I do not know the moved id ' + MoveId + '.');
+    return 'nieznany ruch';
     }
 }
 
@@ -28,13 +29,13 @@ function getMoveName(MoveId){
     computerMove ='scissors';
 } */
 
-printMessage('My move: ' + computerMove);
+printMessage('My moved: ' + computerMove);
 
-let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.'); 
+/*let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.');*/ 
 
 console.log('Gracz wpisał:' + playerInput);
 
-let playerMove = getMoveName(playerInput)
+/*let playerMove = getMoveName(playerInput)*/
 
 /*if(playerInput =='1'){
   playerMove ='rock';
@@ -43,11 +44,13 @@ let playerMove = getMoveName(playerInput)
 }else {(playerInput == '3')
     playerMove ='scissore';
 }*/
-printMessage('Your move: ' + playerMove);
+printMessage('Your moved: ' + playerMove);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
 // zwracanie wyniku gry
+
+console.log('moves:', argComputerMove, argPlayerMove);
 
 function displayResult(argcomputerMove, argplayerMove){
     printMessage('I played ' + argcomputerMove + ', and You ' + argplayerMove);
@@ -69,15 +72,15 @@ if( argcomputerMove == 'rock' && argplayerMove == 'paper'){
     printMessage('Error!');
 }}
 
-displayResult(argcomputerMove, argplayerMove);
+displayResult(computerMove, playerMove);
 
 document.getElementById('play-rock').addEventListener('click', function(){
     playGame(1)
 });
-document.getElementById('play-paper').addEventListener('click', function(){
+document.getElementById('play-paper').addEventListener('click', function (){
     playGame(2)
 });
-document.getElementById('play-scissors').addEventListener('click', function(){
+document.getElementById('play-scissors').addEventListener('click', function (){
     playGame(3)
 });
 document.getElementById('restart').addEventListener('click', function () {
@@ -87,4 +90,5 @@ document.getElementById('restart').addEventListener('click', function () {
 document.getElementById('next-round').addEventListener('click', function () {
     nextRound();
 });
+
 }
