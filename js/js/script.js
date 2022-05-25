@@ -3,17 +3,17 @@ function playGame(playerInput) {
 
 function getMoveName(MoveId){
 
-  if(MoveId == 1){
-    return 'rock';
-    } else if(MoveId == 2){
-    return 'paper';
-    } else if(MoveId == 3){
-    return 'scissors';
-    } else {
-    printMessage ('I do not know the moved id ' + MoveId + '.');
-    return 'nieznany ruch';
-    }
-}
+  if(argMoveId == 1){
+      return 'rock';
+    }else if(argMoveId == 2){
+      return 'paper';
+    }else if(argMoveId == 3){
+      return 'scissors';
+    }else {
+    printMessage ('I can recognize the moved id ' + argMoveId + '.');
+      return 'unknown moved';
+    }}
+
 function displayResult(argComputerMove, argPlayerMove){
     printMessage('I played ' + argComputerMove + ', and You ' + argPlayerMove);
   if( argComputerMove == 'rock' && argPlayerMove == 'paper'){
@@ -76,12 +76,4 @@ document.getElementById('play-paper').addEventListener('click', function (){
 document.getElementById('play-scissors').addEventListener('click', function (){
     playGame(3)
 });
-document.getElementById('restart').addEventListener('click', function (){
-    restartGame();
-});
-
-document.getElementById('next-round').addEventListener('click', function (){
-    nextRound();
-});
-
 }
