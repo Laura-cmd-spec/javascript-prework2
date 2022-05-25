@@ -30,7 +30,7 @@ function displayResult(argComputerMove, argPlayerMove){
     printMessage('You lost!');
   } else if (argComputerMove == argPlayerMove){
     printMessage('Draw!');
-  } else {( argPlayerMove == 'nieznany ruch')
+  } else {( argPlayerMove == 'nieznany ruch');
     printMessage('Error!');
 }}
 
@@ -38,7 +38,7 @@ let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = getMoveName(randomNumber)
+let computerMove = getMoveName(randomNumber);
 
 /*if(randomNumber =='1'){
   computerMove ='rock';
@@ -54,7 +54,7 @@ printMessage('My moved: ' + computerMove);
 
 console.log('Gracz wpisał:' + playerInput);
 
-let playerMove = getMoveName(playerInput)
+let playerMove = getMoveName(playerInput);
 
 /*if(playerInput =='1'){
   playerMove ='rock';
@@ -68,12 +68,9 @@ printMessage('Your moved: ' + playerMove);
 displayResult(computerMove, playerMove);
 
 document.getElementById('play-rock').addEventListener('click', function(){
-    playGame(1)
-});
+    playGame(1)});
 document.getElementById('play-paper').addEventListener('click', function (){
-    playGame(2)
-});
+    playGame(2)});
 document.getElementById('play-scissors').addEventListener('click', function (){
-    playGame(3)
-});
+    playGame(3)});
 }
