@@ -1,44 +1,51 @@
-function playGame(playerInput) {
+
+{function playGame(playerInput) {
   clearMessages();
 
-function getMoveName(MoveId){
+function getMoveName(argMoveId){
 
   if(argMoveId == 1){
       return 'rock';
-    }else if(argMoveId == 2){
+    }
+    if(argMoveId == 2){
       return 'paper';
-    }else if(argMoveId == 3){
+    }
+    if(argMoveId == 3){
       return 'scissors';
-    }else {
-    printMessage ('I can recognize the moved id ' + argMoveId + '.');
-      return 'unknown moved';
-    }}
+    }
+  }
 
 function displayResult(argComputerMove, argPlayerMove){
-    printMessage('I played ' + argComputerMove + ', and You ' + argPlayerMove);
+   
   if( argComputerMove == 'rock' && argPlayerMove == 'paper'){
     printMessage('You Won!');
-  } else if( argComputerMove == 'rock' && argPlayerMove == 'scissors'){
+  }
+   if( argComputerMove == 'rock' && argPlayerMove == 'scissors'){
     printMessage('You lost!');
-  } else if( argComputerMove == 'paper' && argPlayerMove == 'rock'){
+  }
+   if( argComputerMove == 'paper' && argPlayerMove == 'rock'){
     printMessage('You lost!');
-  } else if ( argComputerMove == 'paper' && argPlayerMove == 'scissors'){
+  }
+   if ( argComputerMove == 'paper' && argPlayerMove == 'scissors'){
     printMessage('You Won!');
-  } else if( argComputerMove == 'scissors' && argPlayerMove == 'rock'){
+  } 
+  if( argComputerMove == 'scissors' && argPlayerMove == 'rock'){
     printMessage('You won!');
-  } else if ( argComputerMove == 'scissors' && argPlayerMove == 'paper'){
+  }
+  if ( argComputerMove == 'scissors' && argPlayerMove == 'paper'){
     printMessage('You lost!');
-  } else if (argComputerMove == argPlayerMove){
+  }
+   if (argComputerMove == argPlayerMove){
     printMessage('Draw!');
-  } else {( argPlayerMove == 'nieznany ruch');
-    printMessage('Error!');
-}}
+  }
+}
 
 let randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let computerMove = getMoveName(randomNumber);
+let argComputerMove = getMoveName(randomNumber);
+printMessage('My moved: ' + argComputerMove);
 
 /*if(randomNumber =='1'){
   computerMove ='rock';
@@ -48,13 +55,16 @@ let computerMove = getMoveName(randomNumber);
     computerMove ='scissors';
 } */
 
-printMessage('My moved: ' + computerMove);
+
 
 /*let playerInput = prompt('Choose your move! 1: rock, 2: paper, 3: scissors.');*/ 
 
 console.log('Gracz wpisał:' + playerInput);
 
-let playerMove = getMoveName(playerInput);
+let argPlayerMove = getMoveName(playerInput);
+printMessage('Your moved: ' + argPlayerMove);
+displayResult(argComputerMove, argPlayerMove);
+
 
 /*if(playerInput =='1'){
   playerMove ='rock';
@@ -63,14 +73,14 @@ let playerMove = getMoveName(playerInput);
 }else {(playerInput == '3')
     playerMove ='scissore';
 }*/
-printMessage('Your moved: ' + playerMove);
-
-displayResult(computerMove, playerMove);
-
+}
 document.getElementById('play-rock').addEventListener('click', function(){
-    playGame(1)});
+    playGame(1);
+  });
 document.getElementById('play-paper').addEventListener('click', function (){
-    playGame(2)});
+    playGame(2);
+  });
 document.getElementById('play-scissors').addEventListener('click', function (){
-    playGame(3)});
+    playGame(3);
+  });
 }
