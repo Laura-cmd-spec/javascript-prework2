@@ -1,50 +1,50 @@
 
-{function playGame(playerInput) {
+{const playGame=function(playerInput) {
   clearMessages();
 
-function getMoveName(argMoveId){
+const getMoveName=function(argMoveId){
 
   if(argMoveId == 1){
       return 'rock';
     }
-    if(argMoveId == 2){
+    else if (argMoveId == 2){
       return 'paper';
     }
-    if(argMoveId == 3){
+    else { (argMoveId == 3)
       return 'scissors';
-    }
-  }
+    }}
+  
 
-function displayResult(argComputerMove, argPlayerMove){
+const displayResult=function (argComputerMove, argPlayerMove){
    
   if( argComputerMove == 'rock' && argPlayerMove == 'paper'){
     printMessage('You Won!');
   }
-   if( argComputerMove == 'rock' && argPlayerMove == 'scissors'){
+   else if( argComputerMove == 'rock' && argPlayerMove == 'scissors'){
     printMessage('You lost!');
   }
-   if( argComputerMove == 'paper' && argPlayerMove == 'rock'){
+   else if( argComputerMove == 'paper' && argPlayerMove == 'rock'){
     printMessage('You lost!');
   }
-   if ( argComputerMove == 'paper' && argPlayerMove == 'scissors'){
+   else if ( argComputerMove == 'paper' && argPlayerMove == 'scissors'){
     printMessage('You Won!');
   } 
-  if( argComputerMove == 'scissors' && argPlayerMove == 'rock'){
+  else if( argComputerMove == 'scissors' && argPlayerMove == 'rock'){
     printMessage('You won!');
   }
-  if ( argComputerMove == 'scissors' && argPlayerMove == 'paper'){
+  else if ( argComputerMove == 'scissors' && argPlayerMove == 'paper'){
     printMessage('You lost!');
   }
-   if (argComputerMove == argPlayerMove){
+  else { (argComputerMove == argPlayerMove)
     printMessage('Draw!');
   }
 }
 
-let randomNumber = Math.floor(Math.random() * 3 + 1);
+const randomNumber = Math.floor(Math.random() * 3 + 1);
 
 console.log('Wylosowana liczba to: ' + randomNumber);
 
-let argComputerMove = getMoveName(randomNumber);
+const argComputerMove = getMoveName(randomNumber);
 printMessage('My moved: ' + argComputerMove);
 
 /*if(randomNumber =='1'){
@@ -61,7 +61,7 @@ printMessage('My moved: ' + argComputerMove);
 
 console.log('Gracz wpisał:' + playerInput);
 
-let argPlayerMove = getMoveName(playerInput);
+const argPlayerMove = getMoveName(playerInput);
 printMessage('Your moved: ' + argPlayerMove);
 displayResult(argComputerMove, argPlayerMove);
 
